@@ -5,12 +5,12 @@
 
 ## 0. Metadatos
 
-- Repo: `<PENDIENTE: URL del repo público>`
+- Repo: `https://github.com/Miguelepst/destilador-de-chats-ssot-repositorio`
 - Rama de trabajo: `main`
-- Ruta raw de este archivo: `<PENDIENTE: https://raw.githubusercontent.com/<usuario>/<repo>/main/handoff.md>`
+- Ruta raw de este archivo: `https://raw.githubusercontent.com/Miguelepst/destilador-de-chats-ssot-repositorio/main/handoff.md`
 - Nombre canónico del archivo: `handoff.md` (minúscula; la URL raw distingue mayúsculas)
 - Última actualización: 2026-10-13
-- Versión del handoff: 0.2 (convención de commits registrada)
+- Versión del handoff: 0.3 (repo enlazado y verificado)
 
 ## 1. Propósito del proyecto
 
@@ -21,7 +21,7 @@ Destilar el contenido valioso de chats cortos y desechables hacia un documento p
 - [x] Proyecto creado en Claude
 - [x] Handoff.md inicial
 - [x] Convención de mensajes de commit definida (sección 8)
-- [ ] Repo en GitHub enlazado y verificado
+- [x] Repo en GitHub enlazado y verificado (raw accesible sin autenticación; contenido idéntico al handoff del chat)
 - [ ] Los 3 moldes de archivo entregados y revisados
 - [ ] Los "modes" entregados y revisados
 - [ ] Primer documento persistente generado
@@ -42,12 +42,14 @@ Destilar el contenido valioso de chats cortos y desechables hacia un documento p
 | 2026-10-12 | Chats cortos y desechables | Evitar contexto contaminado; todo lo valioso se persiste |
 | 2026-10-13 | Mensajes de commit largos con formato fijo (sección 8) | Historial legible y registro persistente de las decisiones de base |
 | 2026-10-13 | Nombre canónico `handoff.md` en minúscula | La ruta raw de GitHub distingue mayúsculas; evita enlaces rotos |
+| 2026-10-13 | Dejar el commit raíz `e9ca352` sin reescribir y aplicar la sección 8 desde el siguiente commit | Ya está publicado; reescribirlo exigiría force push. La desviación queda registrada (sección 6) |
 
 ## 5. Pendientes / bloqueos
 
-- Falta URL del repo para verificar alineación handoff ↔ repo.
 - Faltan los 3 moldes de archivo (el registro persistente usa formato temporal hasta entonces).
 - Faltan los modes para revisión.
+- Incorporar la URL raw del handoff en las instrucciones del proyecto de Claude, para que cada chat nuevo pueda leerla sin que se pegue a mano.
+- Tras el commit de este cierre, actualizar el puntero del submódulo en el repo padre `EMA_ECOSISTEMA` (commit propio allí).
 
 ## 6. Registro temporal de logros (pendiente de migrar a los moldes definitivos)
 
@@ -65,24 +67,32 @@ Formato por entrada:
 ### [2026-10-12] Arranque del proyecto
 - Chat: Configuración inicial
 - Qué se logró: definición de descripción, instrucciones del proyecto y handoff base.
-- Evidencia / archivo afectado: `handoff.md`
-- Estado: borrador
-- Siguiente paso: entregar URL del repo, los 3 moldes y los modes.
+- Evidencia / archivo afectado: `handoff.md` (commit raíz `e9ca352`)
+- Estado: commiteado
+- Siguiente paso: entregar los 3 moldes y los modes.
 
 ### [2026-10-13] Convención de mensajes de commit
 - Chat: Convención de commits
 - Qué se logró: se definió y registró el formato de commits largos (sección 8) y se fijó `handoff.md` como nombre canónico.
+- Evidencia / archivo afectado: `handoff.md` (commit raíz `e9ca352`)
+- Estado: commiteado
+- Desviación registrada: el commit raíz se hizo con el mensaje `🔧 chore(handoff): configuración inicial` (sin cuerpo ni pie `Refs:`, resumen sin infinitivo), por lo que NO cumple la sección 8. El commit del submódulo en el repo padre (`a0846d1`, `agrega submódulo`) tampoco. Decisión: no reescribir; la convención rige desde el siguiente commit.
+- Siguiente paso: ninguno (cerrado).
+
+### [2026-10-13] Verificación handoff ↔ repo
+- Chat: Verificación handoff ↔ repo
+- Qué se logró: se verificó que el raw del repo es accesible sin autenticación y coincide con el handoff del chat; se completaron los metadatos de la sección 0 y se registró la desviación del commit raíz.
 - Evidencia / archivo afectado: `handoff.md`
-- Estado: borrador
-- Siguiente paso: hacer el commit con el mensaje propuesto y confirmarlo para pasar a `commiteado`.
+- Estado: borrador (pasa a `commiteado` cuando se confirme el commit)
+- Siguiente paso: hacer el commit con el mensaje de la sección 8 y entregar los 3 moldes.
 
 ## 7. Siguiente paso recomendado
 
-Entregar la URL del repo para verificar el handoff contra el contenido raw y luego los 3 moldes.
+Entregar los 3 moldes de archivo para revisarlos y luego los modes. Antes, confirmar el commit de este cierre.
 
 ## 8. Convención de mensajes de commit
 
-Todos los commits usan mensaje largo (encabezado + cuerpo + pie), en español.
+Todos los commits usan mensaje largo (encabezado + cuerpo + pie), en español. Vigente desde el segundo commit del repo (el commit raíz `e9ca352` es la excepción registrada).
 
 **Estructura**
 
